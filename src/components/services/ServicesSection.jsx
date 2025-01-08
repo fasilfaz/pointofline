@@ -54,12 +54,13 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group"
+              className="opacity-0 translate-y-4 animate-fade-in-up group relative"
+              style={{
+                animationDelay: `${index * 100}ms`,
+                animationFillMode: 'forwards'
+              }}
             >
               <div className="h-full bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -78,10 +79,27 @@ const ServicesSection = () => {
                 
                 <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`} />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
+
+      <style jsx global>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(1rem);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.5s ease-out;
+        }
+      `}</style>
     </section>
   );
 };
