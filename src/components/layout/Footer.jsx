@@ -1,22 +1,20 @@
-// src/components/layout/Footer.jsx
+import React from 'react';
 import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  ChevronRight,
-  Globe
-} from 'lucide-react';
+  FaPhone, 
+  FaEnvelope, 
+  FaMapMarkerAlt, 
+  FaFacebookF, 
+  FaTwitter, 
+  FaLinkedinIn, 
+  FaInstagram 
+} from "react-icons/fa";
+import { HiChevronRight, HiGlobe } from "react-icons/hi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-blue-900 text-white">
-      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -27,10 +25,10 @@ const Footer = () => {
               delivering excellence in technology services since 2015.
             </p>
             <div className="flex space-x-4">
-              <SocialLink href="#" icon={<Facebook size={20} />} />
-              <SocialLink href="#" icon={<Twitter size={20} />} />
-              <SocialLink href="#" icon={<Linkedin size={20} />} />
-              <SocialLink href="#" icon={<Instagram size={20} />} />
+              <SocialLink href="#" icon={<FaFacebookF size={20} />} />
+              <SocialLink href="#" icon={<FaTwitter size={20} />} />
+              <SocialLink href="#" icon={<FaLinkedinIn size={20} />} />
+              <SocialLink href="#" icon={<FaInstagram size={20} />} />
             </div>
           </div>
 
@@ -48,7 +46,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link}>
                   <a href="#" className="text-gray-300 hover:text-white flex items-center group">
-                    <ChevronRight size={16} className="mr-2 transition-transform transform group-hover:translate-x-1" />
+                    <HiChevronRight className="mr-2 transition-transform transform group-hover:translate-x-1" size={16} />
                     {link}
                   </a>
                 </li>
@@ -70,7 +68,7 @@ const Footer = () => {
               ].map((service) => (
                 <li key={service}>
                   <a href="#" className="text-gray-300 hover:text-white flex items-center group">
-                    <ChevronRight size={16} className="mr-2 transition-transform transform group-hover:translate-x-1" />
+                    <HiChevronRight className="mr-2 transition-transform transform group-hover:translate-x-1" size={16} />
                     {service}
                   </a>
                 </li>
@@ -84,18 +82,18 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a href="tel:+97165540005" className="text-gray-300 hover:text-white flex items-center">
-                  <Phone size={20} className="mr-3 flex-shrink-0" />
+                  <FaPhone className="mr-3 flex-shrink-0" size={20} />
                   <span>+971 6 554 0005</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:pointofline@ksa.com" className="text-gray-300 hover:text-white flex items-center">
-                  <Mail size={20} className="mr-3 flex-shrink-0" />
+                  <FaEnvelope className="mr-3 flex-shrink-0" size={20} />
                   <span>pointofline@ksa.com</span>
                 </a>
               </li>
               <li className="flex items-start">
-                <MapPin size={20} className="mr-3 flex-shrink-0 mt-1" />
+                <FaMapMarkerAlt className="mr-3 flex-shrink-0 mt-1" size={20} />
                 <span className="text-gray-300">
                   Sharjah - UAE<br />
                   P.O. Box: 12345
@@ -147,7 +145,7 @@ const Footer = () => {
                 Cookie Policy
               </a>
               <button className="flex items-center text-gray-300 hover:text-white text-sm">
-                <Globe size={16} className="mr-2" />
+                <HiGlobe className="mr-2" size={16} />
                 العربية
               </button>
             </div>
@@ -158,7 +156,6 @@ const Footer = () => {
   );
 };
 
-// Social Link Component
 const SocialLink = ({ href, icon }) => (
   <a
     href={href}

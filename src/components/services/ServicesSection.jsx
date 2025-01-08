@@ -1,40 +1,41 @@
 import { motion } from 'framer-motion';
-import { Network, Database, Shield, Video, Users, Laptop } from "lucide-react";
+import { FaNetworkWired, FaDatabase, FaShieldAlt, FaVideo, FaUsers, FaLaptop } from "react-icons/fa";
+
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Network size={32} />,
+      icon: <FaNetworkWired size={32} />,
       title: "Fiber Cabling",
       description: "Enterprise-grade fiber optic solutions ensuring lightning-fast connectivity",
       color: "from-blue-500 to-blue-600"
     },
     {
-      icon: <Database size={32} />,
+      icon: <FaDatabase size={32} />,
       title: "Data Centre",
       description: "State-of-the-art data center solutions with maximum security",
       color: "from-indigo-500 to-indigo-600"
     },
     {
-      icon: <Shield size={32} />,
+      icon: <FaShieldAlt size={32} />,
       title: "Access Control",
       description: "Advanced security systems for complete peace of mind",
       color: "from-purple-500 to-purple-600"
     },
     {
-      icon: <Video size={32} />,
+      icon: <FaVideo size={32} />,
       title: "Video Wall",
       description: "Immersive visual solutions for command centers and presentations",
       color: "from-red-500 to-red-600"
     },
     {
-      icon: <Users size={32} />,
+      icon: <FaUsers size={32} />,
       title: "Meeting Rooms",
       description: "Smart meeting room solutions for modern collaboration",
       color: "from-green-500 to-green-600"
     },
     {
-      icon: <Laptop size={32} />,
+      icon: <FaLaptop size={32} />,
       title: "IT Hardware",
       description: "Premium IT equipment and comprehensive support services",
       color: "from-yellow-500 to-yellow-600"

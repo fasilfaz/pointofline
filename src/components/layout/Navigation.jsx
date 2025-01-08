@@ -1,16 +1,16 @@
-// src/components/layout/Navigation.jsx
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { HiHome, HiServer, HiInformationCircle, HiCollection, HiMail } from "react-icons/hi";
+import { HiXMark, HiBars3 } from "react-icons/hi2";
 
 const Navigation = ({ isScrolled }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Home', href: '#' },
-    { label: 'Services', href: '#services' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: '#', icon: <HiHome className="inline-block mr-2" size={20} /> },
+    { label: 'Services', href: '#services', icon: <HiServer className="inline-block mr-2" size={20} /> },
+    { label: 'About', href: '#about', icon: <HiInformationCircle className="inline-block mr-2" size={20} /> },
+    { label: 'Projects', href: '#projects', icon: <HiCollection className="inline-block mr-2" size={20} /> },
+    { label: 'Contact', href: '#contact', icon: <HiMail className="inline-block mr-2" size={20} /> }
   ];
 
   return (
@@ -24,7 +24,7 @@ const Navigation = ({ isScrolled }) => {
             className={`
               ${isScrolled ? 'text-gray-700' : 'text-white'} 
               hover:text-blue-500 transition-colors duration-200
-              font-medium
+              font-medium flex items-center
             `}
           >
             {item.label}
@@ -36,7 +36,7 @@ const Navigation = ({ isScrolled }) => {
             ? 'bg-blue-900 text-white' 
             : 'bg-white text-blue-900'} 
           hover:opacity-90 transition-all duration-200
-          font-medium
+          font-medium flex items-center
         `}>
           Get Started
         </button>
@@ -47,8 +47,9 @@ const Navigation = ({ isScrolled }) => {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={`p-2 ${isScrolled ? 'text-gray-700' : 'text-white'}`}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <HiXMark size={24} /> : <HiBars3 size={24} />}
         </button>
       </div>
 
@@ -59,14 +60,15 @@ const Navigation = ({ isScrolled }) => {
             <a
               key={item.label}
               href={item.href}
-              className="block px-6 py-2 text-gray-700 hover:bg-gray-50"
+              className="block px-6 py-2 text-gray-700 hover:bg-gray-50 flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
+              {item.icon}
               {item.label}
             </a>
           ))}
           <div className="px-6 pt-2">
-            <button className="w-full px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors">
+            <button className="w-full px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center">
               Get Started
             </button>
           </div>
