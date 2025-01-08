@@ -75,7 +75,7 @@ const ServicesSection = () => {
                   </p>
                 </div>
                 
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`} />
               </div>
             </motion.div>
           ))}

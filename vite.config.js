@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['framer-motion']
+      external: ['framer-motion', 'lucide-react']
     }
+  },
+  optimizeDeps: {
+    include: ['framer-motion', 'lucide-react']
   }
 })
