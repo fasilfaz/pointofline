@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'lucide-react': 'lucide-react/dist/esm/lucide-react'
+      'lucide-react': 'lucide-react'
     }
   },
   build: {
