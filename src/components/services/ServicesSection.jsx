@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FaNetworkWired, FaDatabase, FaShieldAlt, FaVideo, FaUsers, FaLaptop } from "react-icons/fa";
 
 

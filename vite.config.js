@@ -9,14 +9,14 @@ export default defineConfig({
   //     'lucide-react': 'lucide-react'
   //   }
   // },
-  build: {
-    rollupOptions: {
-      external: ['framer-motion']
-    }
-  },
-  optimizeDeps: {
-    include: ['framer-motion']
-  },
+  // build: {
+  //   rollupOptions: {
+  //     external: ['framer-motion']
+  //   }
+  // },
+  // optimizeDeps: {
+  //   include: ['framer-motion']
+  // },
   server: {
     cors: {
       origin: '*',
