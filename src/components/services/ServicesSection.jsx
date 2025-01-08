@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Network, Database, Shield, Video, Users, Laptop } from 'lucide-react';
+import { Network, Database, Shield, Video, Users, Laptop } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
