@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2d3748;
+  --accent-color: #4299e1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-gray-800;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+/* Arabic text styling */
+.arabic-text {
+  font-family: 'Cairo', sans-serif;
+}
