@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Button = ({ children, variant = 'primary', className = '', ...props }) => {
   const baseStyles = 'px-6 py-3 rounded-md font-medium transition-all duration-300';
