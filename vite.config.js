@@ -16,5 +16,17 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['framer-motion', 'lucide-react']
-  }
+  },
+  server: {
+    cors: {
+      origin: '*',
+      headers: ['Content-Type'],
+      exposeHeaders: ['Content-Length'],
+      credentials: true,
+      maxAge: 86400,
+    },
+    hmr: {
+      overlay: true,
+    },
+  },
 })
