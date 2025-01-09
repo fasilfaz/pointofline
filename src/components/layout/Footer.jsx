@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-[#0783B9] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Subscription */}
-        <div className="mt-12 pt-8 border-t border-blue-800">
+        {/* <div className="mt-12 pt-8 border-t border-[#0783B9]">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-4">Subscribe to Our Newsletter</h3>
             <p className="text-gray-300 mb-6">
@@ -114,21 +114,22 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg bg-blue-800 border border-blue-700 focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+                className="flex-1 px-4 py-2 rounded-lg bg-[#0783B9] border border-[#0783B9] focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-white text-blue-900 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+                className="px-6 py-2 bg-white text-[#0783B9] rounded-lg hover:bg-gray-100 transition-colors font-medium"
               >
                 Subscribe
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
       </div>
+      <hr />
 
       {/* Bottom Bar */}
-      <div className="border-t border-blue-800">
+      <div className="border-t border-[#0783B9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-300 text-sm">
@@ -159,7 +160,7 @@ const Footer = () => {
 const SocialLink = ({ href, icon }) => (
   <a
     href={href}
-    className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-700 transition-colors"
+    className="w-10 h-10 rounded-full bg-[#0783B9] flex items-center justify-center hover:bg-[#0783B9] transition-colors"
   >
     {icon}
   </a>

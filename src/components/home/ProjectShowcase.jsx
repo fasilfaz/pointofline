@@ -22,7 +22,7 @@ const ProjectShowcase = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Featured Projects</h2>
+        <h2 className="text-3xl font-bold text-center text-[#0783B9] mb-12">Featured Projects</h2>
         {projects.map((project, index) => (
           <div 
             key={project.id} 
@@ -38,10 +38,10 @@ const ProjectShowcase = () => {
               />
             </div>
             <div className="lg:w-1/2">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">{project.title}</h3>
+              <h3 className="text-2xl font-bold text-[#0783B9] mb-4">{project.title}</h3>
               <p className="text-lg text-gray-600 mb-4">Location: {project.location}</p>
               <p className="text-gray-600 mb-6">{project.description}</p>
-              <button className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors">
+              <button className="bg-[#0783B9] text-white px-6 py-3 rounded-lg hover:bg-[#0783B9] transition-colors">
                 Learn More
               </button>
             </div>

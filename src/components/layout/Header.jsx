@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className={`text-2xl font-bold ${
-              isScrolled ? 'text-blue-900' : 'text-white'
+              isScrolled ? 'text-[#0783B9]' : 'text-white'
             }`}>
               Point of Line IT
             </h1>

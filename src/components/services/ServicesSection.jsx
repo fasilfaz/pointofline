@@ -45,7 +45,7 @@ const ServicesSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+          <h2 className="text-4xl font-bold text-[#0783B9] mb-4">Our Services</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive IT solutions tailored to meet the demands of modern enterprises
           </p>
@@ -65,7 +65,7 @@ const ServicesSection = () => {
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                 
                 <div className="p-8">
-                  <div className="text-blue-600 mb-6">
+                  <div className="text-[#0783B9] mb-6">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">

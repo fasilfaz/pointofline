@@ -9,7 +9,7 @@ const Navigation = ({ isScrolled }) => {
     { label: 'Home', href: '#', icon: <HiHome className="inline-block mr-2" size={20} /> },
     { label: 'Services', href: '#services', icon: <HiServer className="inline-block mr-2" size={20} /> },
     { label: 'About', href: '#about', icon: <HiInformationCircle className="inline-block mr-2" size={20} /> },
-    { label: 'Projects', href: '#projects', icon: <HiCollection className="inline-block mr-2" size={20} /> },
+    // { label: 'Projects', href: '#projects', icon: <HiCollection className="inline-block mr-2" size={20} /> },
     { label: 'Contact', href: '#contact', icon: <HiMail className="inline-block mr-2" size={20} /> }
   ];
 
@@ -30,16 +30,16 @@ const Navigation = ({ isScrolled }) => {
             {item.label}
           </a>
         ))}
-        <button className={`
+        {/* <button className={`
           px-4 py-2 rounded-lg
           ${isScrolled 
-            ? 'bg-blue-900 text-white' 
-            : 'bg-white text-blue-900'} 
+            ? 'bg-[#0783B9] text-white' 
+            : 'bg-white text-[#0783B9]'} 
           hover:opacity-90 transition-all duration-200
           font-medium flex items-center
         `}>
           Get Started
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu Button */}
@@ -67,11 +67,11 @@ const Navigation = ({ isScrolled }) => {
               {item.label}
             </a>
           ))}
-          <div className="px-6 pt-2">
-            <button className="w-full px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center">
+          {/* <div className="px-6 pt-2">
+            <button className="w-full px-4 py-2 bg-[#0783B9] text-white rounded-lg hover:bg-[#0783B9] transition-colors flex items-center justify-center">
               Get Started
             </button>
-          </div>
+          </div> */}
         </div>
       )}
     </nav>
