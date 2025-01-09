@@ -7,7 +7,7 @@ import ImageGallery from './components/home/ImageGallery';
 import ParallaxBanner from './components/home/ParallaxBanner.jsx';
 import ClientsSection from './components/home/ClientsSection';
 import Footer from './components/layout/Footer';
-import ContactForm from './components/home/contactForm.jsx';
+import ContactForm from './components/home/ContactForm.jsx';
 import AboutPage from './components/home/AboutPage.jsx';
 
 const App = () => {
